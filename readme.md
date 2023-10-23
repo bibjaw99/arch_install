@@ -1,5 +1,7 @@
 # <u>Installing Arch Linux</u> 🔥
 
+<img src="./images/img.png">
+
 ## video references :
 
 1. [Arch Linux Monthly Install: April 2022 - YouTube](https://www.youtube.com/watch?v=HIXnT178TgI&list=PL-odKaUzOz3JarNUoE7jMEL537pmjc1hn&index=21)
@@ -54,9 +56,9 @@ mkfs.ext4 /dev/nvme0n1p3
 ```
 
 > ##### The 1st one is for /boot/efi
-> 
+>
 > ##### The 2nd one is for root /
-> 
+>
 > ##### The 3rd one is for /home
 
 ---
@@ -71,7 +73,7 @@ mount /dev/nvme0n1p2 /mnt
 mkdir -p /mnt/boot
 mount /dev/nvme0n1p1 /mnt/boot/efi
 
-mkdir /mnt/home 
+mkdir /mnt/home
 mount /dev/nvme0n1p3 /mnt/home
 ```
 
@@ -80,7 +82,7 @@ mount /dev/nvme0n1p3 /mnt/home
 ### Step 6: Base Installation:
 
 ```
-pacstrap /mnt linux linux-headers linux-firmware base base-devel 
+pacstrap /mnt linux linux-headers linux-firmware base base-devel
 efibootmgr networkmanager neovim mtools dosfstools
 ```
 
@@ -91,7 +93,7 @@ efibootmgr networkmanager neovim mtools dosfstools
 ```
 genfstab -U /mnt >> /mnt/etc/fstab
 
-# Check generated fstab file 
+# Check generated fstab file
 cat /mnt/etc/fstab
 ```
 
@@ -143,7 +145,7 @@ nvim /etc/hostname
 nvim /etc/hosts
 # add the following line:
 127.0.0.1  localhost
-::1        localhost 
+::1        localhost
 127.0.1.1  <host name>.localdomain  <host name>
 ```
 
@@ -174,7 +176,7 @@ default <host name>-* # save and quit out of vim
 ### Step 15 : Entries Directory
 
 > ##### in the /boot/loader there should be a entries directory.
-> 
+>
 > ##### Go there and add the following line :
 
 ```
@@ -203,6 +205,6 @@ EDITOR=nvim visudo
 ### Setp 17: Final
 
 ```
-exit 
-umount -a  
+exit
+umount -a
 ```
