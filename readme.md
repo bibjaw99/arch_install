@@ -1,5 +1,3 @@
-<img src="./images/img.png">
-
 # <u>Installing Arch Linux</u> 🔥
 
 ## video references :
