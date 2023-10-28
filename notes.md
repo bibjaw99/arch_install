@@ -27,8 +27,12 @@ xdg-mime default pcmanfm.desktop inode/directory
 xdg-user-dirs-update # or xdg-user-dirs-update --force
 ```
 
+---
 
+## EndeavourOS minimal install (Total around 370 pkgs only)
 
-
-
-
+- DE: No Desktop
+- Ticked Packages:
+  - Network: networkmanager
+  - Package Management (full)
+  - EndeavourOS Apps: eos-log-tool, eos-rankmirrors, reflector-simple, Welcome,
